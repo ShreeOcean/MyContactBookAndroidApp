@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#54FF9E80"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_margin="10dp">
+
+    <ImageButton
+        android:id="@+id/btnCaptureImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_baseline_camera_alt_24"
+        app:layout_constraintBottom_toBottomOf="@+id/contact_profile_image"
+        app:layout_constraintEnd_toEndOf="@+id/contact_profile_image"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/contact_profile_image"
+        app:layout_constraintTop_toTopOf="@+id/contact_profile_image"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/contact_profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/ic_baseline_face_24"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_contact_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Contact Name"
+            android:layout_margin="20dp"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@+id/contact_profile_image"
+            tools:layout_editor_absoluteX="5dp" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintTop_toBottomOf="@+id/et_con_num"
+            tools:layout_editor_absoluteX="5dp" />
+
+        <EditText
+            android:id="@+id/et_con_num"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:hint="Contact Number"
+            android:inputType="phone"
+            app:layout_constraintTop_toBottomOf="@+id/et_contact_name"
+            tools:layout_editor_absoluteX="5dp" />
+
+        <EditText
+            android:id="@+id/et_address"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:hint="Address"
+            android:inputType="textPostalAddress"
+            app:layout_constraintTop_toBottomOf="@+id/et_email"
+            tools:layout_editor_absoluteX="5dp" />
+
+        <Button
+            android:id="@+id/btnCreateContact"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="Create Contact"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnEditContact" />
+
+
+    <Button
+        android:id="@+id/btnEditContact"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Edit Contact"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_address" />
+
+        <Button
+            android:id="@+id/btnUpdateContact"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Update Contact"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnDeleteContact"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Update Contact"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
